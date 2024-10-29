@@ -10,6 +10,13 @@
     const operator = prompt('Wprowadź operator(+,-,*,/,**): ');
     const number1 = parseInt(prompt('Wprowadź pierwszą liczbę: '));
     const number2 = parseInt(prompt('Wprowadź drugą liczbę: '));
+    while (isNaN(number1)){
+        number1 = parseInt(prompt('Podaj liczbę'))
+    }
+    while (isNaN(number2)){
+        number2 = parseInt(prompt('Podaj liczbę'))
+    }
+
     switch(operator) {
         case '+':
             result = number1 + number2;
