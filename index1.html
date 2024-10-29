@@ -7,27 +7,30 @@
 </head>
 <body>
     <script>
-    const operator = prompt('Enter operator ( either +, -, * or / ): ');
+    const operator = prompt('Wprowadź operator(+,-,*,/,**): ');
     const number1 = parseFloat(prompt('Enter first number: '));
     const number2 = parseFloat(prompt('Enter second number: '));
     let result;
     switch(operator) {
         case '+':
             result = number1 + number2;
-            console.log(`${number1} + ${number2} = ${result}`);
+            console.log({number1} + {number2} = {result});
             break;
         case '-':
             result = number1 - number2;
-            console.log(`${number1} - ${number2} = ${result}`);
+            console.log({number1} - {number2} = {result});
             break;
         case '*':
             result = number1 * number2;
-            console.log(`${number1} * ${number2} = ${result}`);
+            console.log({number1} * {number2} = {result});
             break;
         case '/':
             result = number1 / number2;
-            console.log(`${number1} / ${number2} = ${result}`);
+            console.log({number1} / {number2} = {result});
             break;
+        case '**':
+            result = number1 ** number2;
+            console.log({number1} ** {number2} = {result});
         default:
             console.log('Invalid operator');
             break;
