@@ -27,12 +27,15 @@
         case '/':
             result = number1 / number2;
             console.log({number1} / {number2} = {result});
+            if (number2 === 0) {
+            console.log("Nie można dzielić przez 0!");
+            }
             break;
         case '**':
             result = number1 ** number2;
             console.log({number1} ** {number2} = {result});
         default:
-            console.log('Invalid operator');
+            console.log('Zły operator!');
             break;
     }
     </script>
