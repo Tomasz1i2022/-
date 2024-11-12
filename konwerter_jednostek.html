@@ -14,8 +14,14 @@
             const jednostka = prompt("Na jaką jednostkę chcesz przeliczyć(km/mile):");
             const wartosc = parseInt(prompt("Podaj ilość(km/mile):"));
             while (isNaN(wartosc)){
-        wartosc = parseInt(prompt("Podaj ilość(km/mile):"))
-    };
+                wartosc = parseInt(prompt("Podaj ilość(km/mile):"))
+            };
+            if (jednostka == "km"){
+                result = wartosc * 1.61
+            } else if (jednostka == "mile"){
+                result = wartosc * 0.62
+            };
+            document.write(wartosc "");
         </script>
     </main>
 </body>
