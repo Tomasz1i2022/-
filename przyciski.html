@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="paragr1" name="paragr">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt repellendus quis, totam doloribus quaerat molestias nesciunt neque a, autem inventore architecto 
+        ad consectetur impedit numquam. Quisquam quo beatae error nulla, earum nesciunt ut perspiciatis ipsa id ipsam? Ratione, optio itaque, eaque ea illum a recusandae molestias 
+        mollitia cupiditate id excepturi error repellendus quo at tenetur officia fugiat maiores esse? Maxime, possimus. Libero, quae! Ab ipsum mollitia consectetur laboriosam, quas 
+        fugit aliquam optio aliquid aut officiis maxime quidem fugiat ex non ipsam nisi repudiandae perspiciatis autem itaque voluptate aperiam magnam, quisquam facere! Dolorem soluta 
+        consectetur obcaecati modi eos ratione, rem ea.
+    </div>
+    <br><div id="paragr2" name="paragr">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ratione voluptatem possimus. Consequatur eligendi magnam vero voluptatibus, dolore architecto natus vitae illum 
+        perspiciatis praesentium a dolorum autem. Dolor id pariatur perspiciatis eum! Doloribus enim, ullam id dolorum facere, culpa iusto praesentium aspernatur harum nisi alias corporis 
+        ducimus, autem mollitia. Voluptatibus voluptate nam, eligendi nostrum eius esse sunt aspernatur beatae sint mollitia fugit quas sit nisi nesciunt quaerat eveniet, ratione non 
+        minima animi architecto? Impedit maiores quod minus cumque. Et, quidem! Voluptatibus id ipsam architecto a quaerat velit delectus officia pariatur quisquam sint nulla eum reiciendis 
+        voluptatum, soluta provident cumque deleniti?
+    </div>
+    <br><div id="paragr3" name="paragr">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae praesentium veniam adipisci distinctio, totam tempora? Deserunt enim, placeat esse aperiam sint excepturi 
+        veritatis a commodi molestiae dolore illo quibusdam saepe voluptas, amet sit debitis libero vel, voluptate quas sed minima voluptates? Odit, porro recusandae esse, in dolorem 
+        veritatis quaerat ab at deserunt quo, natus itaque nam nobis animi nostrum. Ab accusantium officia vel natus excepturi dolore nisi dolorum illum laboriosam voluptatibus, harum 
+        dolorem quos? Fugit, blanditiis ipsa aliquam exercitationem, beatae harum necessitatibus animi temporibus veritatis, possimus perspiciatis sit consequatur. Nisi ratione quam veritatis. 
+        Repellat quis harum omnis itaque voluptatum?
+    </div>
+    <br><br>
+    <label for="textColor">Choose text color <input type="color" id="textColor"></label>
+    <button id="colorButton">Change</button>
+    <button id="colorButton1">Change only for paragraph 1</button>
+    <button id="colorButton2">Change only for paragraph 2</button>
+    <button id="colorButton3">Change only for paragraph 3</button><br>
+    <br>Bold text
+    <button id="boldButton">Change</button>
+    <button id="boldButton1">Change only for paragraph 1</button>
+    <button id="boldButton2">Change only for paragraph 2</button>
+    <button id="boldButton3">Change only for paragraph 3</button><br>
+    <br>Italic text
+    <button id="italicButton">Change</button>
+    <button id="italicButton1">Change only for paragraph 1</button>
+    <button id="italicButton2">Change only for paragraph 2</button>
+    <button id="italicButton3">Change only for paragraph 3</button>
+    
+    <script>
+        const texts = document.getElementsByName("paragr");
+        const textColor = document.querySelector('[type="color"]');
+        const colorButton = document.querySelector("#colorButton");
+        const colorButton1 = document.querySelector("#colorButton1");
+        const colorButton2 = document.querySelector("#colorButton2");
+        const colorButton3 = document.querySelector("#colorButton3");
+        
+        const boldButton = document.querySelector("#boldButton");
+        const boldButton1 = document.querySelector("#boldButton1");
+        const boldButton2 = document.querySelector("#boldButton2");
+        const boldButton3 = document.querySelector("#boldButton3");
+        
+        const italicButton = document.querySelector("#italicButton");
+        const italicButton1 = document.querySelector("#italicButton1");
+        const italicButton2 = document.querySelector("#italicButton2");
+        const italicButton3 = document.querySelector("#italicButton3");
+
+        colorButton.addEventListener("click", function(){
+            for (let text of texts) {
+                text.style.color = textColor.value;
+            }
+        });
+
+        colorButton1.addEventListener("click", function(){
+            document.getElementById("paragr1").style.color = textColor.value;
+        });
+
+        colorButton2.addEventListener("click", function(){
+            document.getElementById("paragr2").style.color = textColor.value;
+        });
+
+        colorButton3.addEventListener("click", function(){
+            document.getElementById("paragr3").style.color = textColor.value;
+        });
+
+        boldButton.addEventListener("click", function(){
+            for (let text of texts) {
+                if (text.style.fontWeight === 'bold') {
+                    text.style.fontWeight = 'normal';
+                } else {
+                    text.style.fontWeight = 'bold';
+                }
+            }
+        });
+
+        boldButton1.addEventListener("click", function(){
+            const paragr1 = document.getElementById("paragr1");
+            if (paragr1.style.fontWeight === 'bold') {
+                paragr1.style.fontWeight = 'normal';
+            } else {
+                paragr1.style.fontWeight = 'bold';
+            }
+        });
+
+        boldButton2.addEventListener("click", function(){
+            const paragr2 = document.getElementById("paragr2");
+            if (paragr2.style.fontWeight === 'bold') {
+                paragr2.style.fontWeight = 'normal';
+            } else {
+                paragr2.style.fontWeight = 'bold';
+            }
+        });
+
+        boldButton3.addEventListener("click", function(){
+            const paragr3 = document.getElementById("paragr3");
+            if (paragr3.style.fontWeight === 'bold') {
+                paragr3.style.fontWeight = 'normal';
+            } else {
+                paragr3.style.fontWeight = 'bold';
+            }
+        });
+
+        italicButton.addEventListener("click", function(){
+            for (let text of texts) {
+                if (text.style.fontStyle === 'italic') {
+                    text.style.fontStyle = 'normal';
+                } else {
+                    text.style.fontStyle = 'italic';
+                }
+            }
+        });
+
+        italicButton1.addEventListener("click", function(){
+            const paragr1 = document.getElementById("paragr1");
+            if (paragr1.style.fontStyle === 'italic') {
+                paragr1.style.fontStyle = 'normal';
+            } else {
+                paragr1.style.fontStyle = 'italic';
+            }
+        });
+
+        italicButton2.addEventListener("click", function(){
+            const paragr2 = document.getElementById("paragr2");
+            if (paragr2.style.fontStyle === 'italic') {
+                paragr2.style.fontStyle = 'normal';
+            } else {
+                paragr2.style.fontStyle = 'italic';
+            }
+        });
+
+        italicButton3.addEventListener("click", function(){
+            const paragr3 = document.getElementById("paragr3");
+            if (paragr3.style.fontStyle === 'italic') {
+                paragr3.style.fontStyle = 'normal';
+            } else {
+                paragr3.style.fontStyle = 'italic';
+            }
+        });
+    </script>
+</body>
+</html>
