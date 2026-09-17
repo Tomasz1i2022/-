@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(241, 250, 238);
+    color: rgb(27, 67, 50);
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+header, footer{
+    background-color: rgb(27, 67, 50);
+    color: white;
+    text-align: center;
+}
+menu {
+    gap: 16;
+}
+menu a {
+    color: #95d5b2;
+}
+menu a:hover {
+    color: white;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+}
+li {
+    padding-right: 30px;
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+main {
+    width: 960px;
+    margin: 24px;
+}
+.karty_wyrobow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 16;
+}
+.karta {
+    border: solid;
+    padding: 5px;
+    margin: 10px;
+}
+.karta img {
+    width: 280px;
+}
+#karta1 {
+    grid-row: inherit;
+    grid-column: 1;
+}
+#karta2 {
+    grid-row: inherit;
+    grid-column: 2;
+}
+#karta3 {
+    grid-row: inherit;
+    grid-column: 3;
+}
+table, td {
+    width: 480px;
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 10px;
+}
+th {
+    background-color: rgb(27, 67, 50);
+    color: rgb(241, 250, 238);
+}
+form {
+    width: 480px;
+    border: 2px dashed #2d6a4f;
+    border-radius: 8px;
+    padding: 16px 24px;
+}

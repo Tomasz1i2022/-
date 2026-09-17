@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Atelier - Glina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Atelier Glina</h1>
+        <menu>
+            <ul>
+                <li><a href="#wybory">Wyroby</a></li>
+                <li><a href="#cennik">Cennik</a></li>
+                <li><a href="#zapis">Zapis</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <h2>Usługi</h2>
+        <dl>
+            <dt>Kubek</dt>
+                <dd>od 45 zł</dd>
+            <dt>Miska</dt>
+                <dd>od 70 zł</dd>
+            <dt>Wazon</dt>
+                <dd>od 90 zł</dd>
+        </dl>
+        <h2>Wyroby</h2>
+        <div class="karty_wyrobow">
+            <div class="karta" id="karta1">
+                <img src="https://picsum.photos/400/260?random=1" alt="obraz1">
+                <h3>Kubek kamionkowy</h3>
+                <p>Kubek toczony ręcznie, szkliwiony.</p>
+            </div>
+            <div class="karta" id="karta2">
+                <img src="https://picsum.photos/400/260?random=2" alt="obraz2">
+                <h3>Miska na owoce</h3>
+                <p>Szeroka miska stołowa.</p>
+            </div>
+            <div class="karta" id="karta3">
+                <img src="https://picsum.photos/400/260?random=3" alt="obraz3">
+                <h3>Wazon wysoki</h3>
+                <p>Wazon na kwaity cięte.</p>
+            </div>
+        </div>
+        <h2>Cennik</h2>
+        <table>
+            <tr>
+                <th>Wyrób</th>
+                <th>Wypał</th>
+                <th>Cena</th>
+            </tr>
+            <tr>
+                <td>Kubek</td>
+                <td>2 dni</td>
+                <td><b>45 zł</b></td>
+            </tr>
+            <tr>
+                <td>Miska</td>
+                <td>3 dni</td>
+                <td><b>70 zł</b></td>
+            </tr>
+            <tr>
+                <td>Wazon</td>
+                <td>4 dni</td>
+                <td><b>90 zł</b></td>
+            </tr>
+        </table>
+        <h2>Zapis na wypał</h2>
+        <form>
+            <p>Imię: <input type="text"></p>
+            <p>Email: <input type="email"></p>
+            <p>Wyrób: 
+                <select name="">
+                    <option value="kubek">Kubek</option>
+                    <option value="miska">Miska</option>
+                    <option value="wazon">Wazon</option>
+                </select>
+            </p><br>
+            <button type="submit">Zapisz się ne wypał</button>
+        </form>
+    </main>
+</body>
+</html>
